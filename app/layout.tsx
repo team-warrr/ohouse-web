@@ -1,6 +1,6 @@
-import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
+import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -19,9 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ko" suppressHydrationWarning>
       <head />
-      <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
+      <body className={cn("min-h-screen bg-background font-sans", fontSans.variable)}>
         {children}
       </body>
     </html>
