@@ -42,6 +42,7 @@ export async function signup(formData: FormData) {
 	});
 
 	if (error) {
+		console.error(error);
 		redirect(encodeURI("/login?message=회원 가입 중 오류가 발생하였습니다"));
 	}
 
