@@ -1,7 +1,8 @@
 "use client";
-
 import Image from "next/image";
+
 import { ChangeEvent, useRef, useState } from "react";
+
 import View from "@/shared/components/view";
 
 export default function UploadImagePage() {

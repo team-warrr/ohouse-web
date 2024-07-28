@@ -2,6 +2,8 @@ import { Inter as FontSans } from "next/font/google";
 
 import { cn } from "@/lib/utils";
 import Footer from "@/shared/components/footer";
+import Header from "@/shared/Header";
+
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -24,6 +26,7 @@ export default function RootLayout({
     <html lang="ko" suppressHydrationWarning>
       <head />
       <body className={cn("min-h-screen bg-background font-sans", fontSans.variable)}>
+        <Header />
         {children}
         <Footer />
       </body>

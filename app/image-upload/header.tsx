@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export default function Header() {
+export default function ImageUploadHeader() {
   const router = useRouter();
 
   const handleClick = () => {
