@@ -13,7 +13,7 @@ export default function RecordChallengePage() {
           width={500}
           height={500}
         />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-50" />
         <Button className="bg-transparent text-white border-1 rounded-none absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
           더 편하게 앱으로 보기 {">"}
         </Button>
@@ -79,7 +79,7 @@ export default function RecordChallengePage() {
             <Button
               fullWidth
               as={Link}
-              href={"/upload-image"}
+              href={"/image-upload"}
               size="lg"
               color="primary"
               className={"text-white rounded-[4px] mt-[20px]"}

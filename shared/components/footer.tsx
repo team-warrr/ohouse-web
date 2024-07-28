@@ -23,7 +23,7 @@ export default function Footer() {
           <Divider />
         </div>
         <div className="text-gray-500 text-sm">
-          &copy; 2023 오늘의 집 클론. All rights reserved.
+          &copy; 2024 오늘의 집 클론. All rights reserved.
         </div>
       </div>
     </>
