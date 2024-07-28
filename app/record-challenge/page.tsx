@@ -5,12 +5,18 @@ import View from "@/shared/components/view";
 export default function RecordChallengePage() {
   return (
     <View>
-      <Image
-        alt="record-challenge"
-        src={"/record-challenge-preview-image.avif"}
-        width={500}
-        height={500}
-      />
+      <div className={"relative"}>
+        <Image
+          alt="record-challenge"
+          src={"/record-challenge-preview-image.avif"}
+          width={500}
+          height={500}
+        />
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <Button className="bg-transparent text-white border-1 rounded-none absolute left-1/2 top-1/2 transform -translate-x-1/2">
+          더 편하게 앱으로 보기 {">"}
+        </Button>
+      </div>
       <div className={"px-[16px]"}>
         <header className={"flex flex-col gap-[17px] mt-[16px] mb-[15px] font-bold"}>
           <h1>#플레이팅필살템 챌린지 (7/22~8/4)</h1>
@@ -71,6 +77,8 @@ export default function RecordChallengePage() {
             />
             <Button
               fullWidth
+              as={"a"}
+              href={"/upload-image"}
               size="lg"
               color="primary"
               className={"text-white rounded-[4px] mt-[20px]"}
