@@ -20,7 +20,7 @@ const Header = () => {
   const menuItems = ["Features", "Customers", "Integrations"];
 
   return (
-    <Navbar className="w-full">
+    <Navbar maxWidth={"full"}>
       <NavbarBrand>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -29,7 +29,7 @@ const Header = () => {
       </NavbarBrand>
       <NavbarContent className="sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="/">
             <Image src={"/logo.svg"} width={71} height={28} alt={"ohouse-logo"} />
           </Link>
         </NavbarItem>
