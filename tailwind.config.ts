@@ -36,6 +36,11 @@ const config = {
           to: { height: "0" },
         },
       },
+      colors: {
+        blue: {
+          400: "rgb(53, 197, 240)",
+        },
+      },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
