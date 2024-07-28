@@ -1,5 +1,6 @@
 import { Button, Divider } from "@nextui-org/react";
 import Image from "next/image";
+import Link from "next/link";
 import View from "@/shared/components/view";
 
 export default function RecordChallengePage() {
@@ -13,7 +14,7 @@ export default function RecordChallengePage() {
           height={500}
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <Button className="bg-transparent text-white border-1 rounded-none absolute left-1/2 top-1/2 transform -translate-x-1/2">
+        <Button className="bg-transparent text-white border-1 rounded-none absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
           더 편하게 앱으로 보기 {">"}
         </Button>
       </div>
@@ -77,7 +78,7 @@ export default function RecordChallengePage() {
             />
             <Button
               fullWidth
-              as={"a"}
+              as={Link}
               href={"/upload-image"}
               size="lg"
               color="primary"

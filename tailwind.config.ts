@@ -38,7 +38,7 @@ const config = {
       },
       colors: {
         blue: {
-          400: "rgb(53, 197, 240)",
+          400: "#35c5f0",
         },
       },
       animation: {
