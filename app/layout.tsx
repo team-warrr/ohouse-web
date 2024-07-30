@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "오늘의 집 클론",
     description: "오늘의 집 클론 코딩 사이트입니다.",
+    images: [
+      "https://s3-ap-northeast-1.amazonaws.com/bucketplace-v2-development/uploads/default_images/open_graph_icon_2.png",
+    ],
   },
 };
 
