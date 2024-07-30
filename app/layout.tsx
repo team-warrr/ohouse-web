@@ -24,6 +24,9 @@ export const metadata: Metadata = {
       "https://s3-ap-northeast-1.amazonaws.com/bucketplace-v2-development/uploads/default_images/open_graph_icon_2.png",
     ],
   },
+  icons: {
+    icon: "/logo-image.jpeg",
+  },
 };
 
 export default function RootLayout({
