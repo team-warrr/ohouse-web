@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import ImageUploadHeader from "@/shared/components/image-upload-header";
+import ImageUploadHeader from "@/shared/layouts/image-upload-header";
 import Content from "./content";
 import Footer from "./footer";
 import CommonHeader from "./header";

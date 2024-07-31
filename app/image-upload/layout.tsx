@@ -1,4 +1,4 @@
-import Layout from "@/shared/components/layout";
+import Layout from "@/shared/layouts/layout";
 
 const title = "이미지 업로드";
 
