@@ -1,4 +1,4 @@
-import ImageUploadHeader from "./header";
+import ImageUploadHeader from "../../shared/components/image-upload-header";
 
 const title = "이미지 업로드";
 
