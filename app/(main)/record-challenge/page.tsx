@@ -3,6 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import View from "@/shared/components/view";
 
+const title = "기록 챌린지";
+
+export const metadata = {
+  title,
+  openGraph: {
+    title,
+  },
+};
+
 export default function RecordChallengePage() {
   return (
     <View>

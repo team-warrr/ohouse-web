@@ -3,6 +3,15 @@ import Image from "next/image";
 
 import View from "@/shared/components/view";
 
+const title = "행운 출첵";
+
+export const metadata = {
+  title,
+  openGraph: {
+    title,
+  },
+};
+
 export default function AttendancePage() {
   return (
     <View>
