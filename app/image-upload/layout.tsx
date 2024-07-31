@@ -1,4 +1,4 @@
-import ImageUploadHeader from "../../shared/components/image-upload-header";
+import Layout from "@/shared/components/layout";
 
 const title = "이미지 업로드";
 
@@ -9,11 +9,12 @@ export const metadata = {
   },
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function ImageUploadLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <ImageUploadHeader />
-      {children}
-    </>
+    <Layout>
+      <Layout.ImageUploadHeader />
+      <Layout.Content>{children}</Layout.Content>
+      <Layout.Footer />
+    </Layout>
   );
 }

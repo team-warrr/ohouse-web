@@ -1,10 +1,11 @@
-import Header from "@/shared/components/header";
+import Layout from "@/shared/components/layout";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function CommonLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <Header />
-      {children}
-    </>
+    <Layout>
+      <Layout.Header />
+      <Layout.Content>{children}</Layout.Content>
+      <Layout.Footer />
+    </Layout>
   );
 }
