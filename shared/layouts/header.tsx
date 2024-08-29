@@ -35,7 +35,7 @@ const CommonHeader = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <Navbar maxWidth={"full"} isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar maxWidth="full" isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarBrand>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -45,20 +45,20 @@ const CommonHeader = () => {
       <NavbarContent className="sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link color="foreground" href="/">
-            <Image src={"/logo.svg"} width={71} height={28} alt={"ohouse-logo"} />
+            <Image src="/logo.svg" width={71} height={28} alt="ohouse-logo" />
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
           <Button as={Link} color="primary" href="/login" variant="flat">
-            Sign Up
+            로그인
           </Button>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {menuItems.map(({ name, href }, index) => (
-          <NavbarMenuItem key={`${name}-${index}`} onClick={closeMenu}>
+        {menuItems.map(({ name, href }) => (
+          <NavbarMenuItem key={name} onClick={closeMenu}>
             <Link href={href} className="w-full">
               {name}
             </Link>
