@@ -15,12 +15,27 @@ import Link from "next/link";
 import { useState } from "react";
 
 const CommonHeader = () => {
-  const [isMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = ["Features", "Customers", "Integrations"];
+  const menuItems = [
+    {
+      name: "홈",
+      href: "/",
+    },
+    {
+      name: "행운 출첵",
+      href: "/attendance",
+    },
+    {
+      name: "기록 챌린지",
+      href: "/record-challenge",
+    },
+  ];
+
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <Navbar maxWidth={"full"}>
+    <Navbar maxWidth={"full"} isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarBrand>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -42,10 +57,10 @@ const CommonHeader = () => {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link href="#" className="w-full">
-              {item}
+        {menuItems.map(({ name, href }, index) => (
+          <NavbarMenuItem key={`${name}-${index}`} onClick={closeMenu}>
+            <Link href={href} className="w-full">
+              {name}
             </Link>
           </NavbarMenuItem>
         ))}
