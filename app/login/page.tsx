@@ -1,10 +1,10 @@
 "use client";
 
-import Logo from "@/shared/components/Logo";
-import View from "@/shared/components/view";
-import { signIn } from "next-auth/react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
+import { signIn } from "next-auth/react";
+import Logo from "@/shared/components/Logo";
+import View from "@/shared/components/view";
 
 const LoginPage = () => {
   const searchParams = useSearchParams();
