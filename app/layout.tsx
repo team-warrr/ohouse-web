@@ -3,6 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -37,7 +38,7 @@ export default function RootLayout({
     <html lang="ko" suppressHydrationWarning>
       <head />
       <body className={cn("min-h-screen bg-background font-sans", fontSans.variable)}>
-        {children}
+        <Suspense>{children}</Suspense>
       </body>
     </html>
   );
