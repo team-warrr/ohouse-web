@@ -4,7 +4,9 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.team-warrr.ohouseApp",
-      "sha256_cert_fingerprints": ["SHA256 fingerprint of your app's signing certificate"]
+      "sha256_cert_fingerprints": [
+        "0E:DE:11:89:32:9F:D2:59:20:20:87:B9:D0:CB:40:8A:D1:9C:56:23:2B:3F:7F:C1:2D:00:83:48:3D:12:69:76"
+      ]
     }
   }
 ]
