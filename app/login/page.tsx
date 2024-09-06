@@ -2,21 +2,50 @@
 
 import Logo from "@/shared/components/ohouse-logo";
 import View from "@/shared/components/view";
+import { getEnvironment } from "@webviewkit/environment";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const LoginPage = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") || "/";
 
+  const navigateToLoginScreen = () => {
+    const url = `ohouseapp://login`;
+
+    window.location.replace(url);
+  };
+
   const kakaoLogin = () => {
+    if (isMobile) {
+      navigateToLoginScreen();
+      return;
+    }
+
     signIn("kakao", { callbackUrl });
   };
 
   const naverLogin = () => {
+    if (isMobile) {
+      navigateToLoginScreen();
+      return;
+    }
+
     signIn("naver", { callbackUrl });
   };
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent;
+    const environment = getEnvironment(userAgent);
+
+    if (environment.os.name === "Android" || "iOS") {
+      setIsMobile(true);
+    }
+  }, []);
 
   return (
     <View>
