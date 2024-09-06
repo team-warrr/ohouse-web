@@ -16,7 +16,7 @@ export default function DeepLinkButton({
   path,
 }: DeepLinkButtonPropsType) {
   const handleClick = () => {
-    const url = `https://ohouse-web.vercel.app/${path}`;
+    const url = `myapp://${path}`;
 
     window.location.replace(url);
   };
