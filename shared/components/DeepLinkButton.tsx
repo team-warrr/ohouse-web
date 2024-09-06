@@ -16,7 +16,7 @@ export default function DeepLinkButton({
   path,
 }: DeepLinkButtonPropsType) {
   const handleClick = () => {
-    const url = `myapp://${path}`;
+    const url = `ohouseapp://${path}`;
 
     window.location.replace(url);
   };
