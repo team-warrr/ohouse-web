@@ -22,9 +22,12 @@ export default function DeepLinkButton({
 
   useEffect(() => {
     const userAgent = navigator.userAgent;
-    const environment = getEnvironment(userAgent);
+    const {
+      os: { name: osName },
+      isWebView,
+    } = getEnvironment(userAgent);
 
-    if (environment.os.name === "Android" || "macOS" || "iOS") {
+    if ((osName === "Android" || "macOS" || "iOS") && !isWebView) {
       setShowButton(true);
     }
   }, []);
