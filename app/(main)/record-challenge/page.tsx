@@ -1,4 +1,4 @@
-import DeepLinkButton from "@/shared/components/DeepLinkButton";
+import DeepLinkButton from "@/shared/components/deep-link-button";
 import View from "@/shared/components/view";
 import { Button, Divider } from "@nextui-org/react";
 import Image from "next/image";
