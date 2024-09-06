@@ -1,7 +1,8 @@
+import DeepLinkButton from "@/shared/components/DeepLinkButton";
+import View from "@/shared/components/view";
 import { Button, Divider } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
-import View from "@/shared/components/view";
 
 const title = "기록 챌린지";
 
@@ -23,9 +24,12 @@ export default function RecordChallengePage() {
           height={500}
         />
         <div className="absolute inset-0 bg-black opacity-50" />
-        <Button className="bg-transparent text-white border-1 rounded-none absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <DeepLinkButton
+          className="bg-transparent text-white border-1 rounded-none absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          path={"record-challenge"}
+        >
           더 편하게 앱으로 보기 {">"}
-        </Button>
+        </DeepLinkButton>
       </div>
       <div className={"px-[16px]"}>
         <header className={"flex flex-col gap-[17px] mt-[16px] mb-[15px] font-bold"}>
