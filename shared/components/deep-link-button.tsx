@@ -1,7 +1,8 @@
 "use client";
 
 import { Button } from "@nextui-org/react";
-import { CSSProperties, PropsWithChildren } from "react";
+import { getEnvironment } from "@webviewkit/environment";
+import { CSSProperties, PropsWithChildren, useEffect, useState } from "react";
 
 type DeepLinkButtonPropsType = {
   style?: CSSProperties;
@@ -15,6 +16,17 @@ export default function DeepLinkButton({
   children,
   path,
 }: DeepLinkButtonPropsType) {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent;
+    const environment = getEnvironment(userAgent);
+
+    if (environment.os.name === "Android" || "macOS" || "iOS") {
+      setShowButton(true);
+    }
+  }, []);
+
   const handleClick = () => {
     const url = `ohouseapp://${path}`;
 
@@ -22,8 +34,10 @@ export default function DeepLinkButton({
   };
 
   return (
-    <Button style={style} className={className} onClick={handleClick}>
-      {children}
-    </Button>
+    showButton && (
+      <Button style={style} className={className} onClick={handleClick}>
+        {children}
+      </Button>
+    )
   );
 }
