@@ -15,12 +15,10 @@ export default function DeepLinkButton({
   children,
   path,
 }: DeepLinkButtonPropsType) {
-  const handleClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-
+  const handleClick = () => {
     const url = `https://ohouse-web.vercel.app/${path}`;
 
-    window.location.href = url;
+    window.location.replace(url);
   };
 
   return (
