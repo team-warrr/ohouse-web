@@ -33,7 +33,7 @@ export default function DeepLinkButton({
   }, []);
 
   const handleClick = () => {
-    const url = `ohouseapp://${path}`;
+    const url = `https://ohouse-web.vercel.app/${path}?app_link=true`;
 
     window.location.replace(url);
   };
