@@ -33,9 +33,9 @@ export default function DeepLinkButton({
   }, []);
 
   const handleClick = () => {
-    const intentUrl = `intent://ohouse-web.vercel.app/${path}#Intent;scheme=https;package=com.ohouseapp;S.browser_fallback_url=https://play.google.com/store/apps;end;`;
+    const url = `https://ohouse-web.vercel.app/${path}?app_link=true`;
 
-    window.location.replace(intentUrl);
+    window.location.replace(url);
   };
 
   return (
